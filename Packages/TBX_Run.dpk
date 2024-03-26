@@ -1,20 +1,21 @@
 package TBX_Run;
 
 {$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
-{$DEBUGINFO ON}
+{$DEBUGINFO OFF}
 {$EXTENDEDSYNTAX ON}
 {$IMPORTEDDATA ON}
 {$IOCHECKS ON}
-{$LOCALSYMBOLS ON}
+{$LOCALSYMBOLS OFF}
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
 {$OPTIMIZATION ON}
 {$OVERFLOWCHECKS OFF}
 {$RANGECHECKS OFF}
-{$REFERENCEINFO ON}
+{$REFERENCEINFO OFF}
 {$SAFEDIVIDE OFF}
 {$STACKFRAMES OFF}
 {$TYPEDADDRESS OFF}
@@ -22,6 +23,8 @@ package TBX_Run;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'Toolbar2000 - TBX Extensions'}
 {$RUNONLY}
 {$IMPLICITBUILD OFF}
@@ -48,6 +51,11 @@ contains
   TBXToolPals in '..\Source\TBXToolPals.pas',
   TBXUtils in '..\Source\TBXUtils.pas',
   TBXUxThemes in '..\Source\TBXUxThemes.pas',
-  TBXDefaultTheme in '..\Source\Themes\TBXDefaultTheme.pas';
+  TBXAluminumTheme in '..\Source\Themes\TBXAluminumTheme.pas',
+  TBXDefaultTheme in '..\Source\Themes\TBXDefaultTheme.pas',
+  TBXOffice2003Theme in '..\Source\Themes\TBXOffice2003Theme.pas',
+  TBXOfficeXPTheme in '..\Source\Themes\TBXOfficeXPTheme.pas',
+  TBXProfessionalTheme in '..\Source\Themes\TBXProfessionalTheme.pas',
+  TBXStripesTheme in '..\Source\Themes\TBXStripesTheme.pas';
 
 end.
